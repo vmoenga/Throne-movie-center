@@ -4,7 +4,8 @@ import React from 'react';
 
 const NavigationBar = () => {
     const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const middleOfPage = window.innerHeight / 2;
+        window.scrollTo({ top: middleOfPage, behavior: 'smooth' });
     };
 
     const scrollToFooter = () => {
@@ -13,7 +14,7 @@ const NavigationBar = () => {
     };
 
     const scrollToContactForm = () => {
-        const contactForm = document.getElementById('contact-form'); // Correct the ID to match your ContactForm component
+        const contactForm = document.getElementById('contact Form');
         contactForm.scrollIntoView({ behavior: 'smooth' });
     };
 
