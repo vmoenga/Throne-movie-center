@@ -15,8 +15,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can handle form submission, such as sending data to your backend or service
-        console.log(formData); // For demonstration, log the form data
+        console.log(formData); 
         // Clear the form fields after submission
         setFormData({
             name: '',
