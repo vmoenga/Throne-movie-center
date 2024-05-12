@@ -8,22 +8,26 @@ import Footer from './footer.jsx';
 import MovieCard from './MovieCard.jsx';
 import ContactForm from './ContactForm.jsx';
 
+// URL of the OMDB API
 const API_URL = 'https://omdbapi.com?apikey=fe2f6c44';
 
+// Functional component App
 const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
 
     const searchMovies = async (title) => {
-        const response = await fetch(`${API_URL}&s=${title}`);
-        const data = await response.json();
+        const response = await fetch(`${API_URL}&s=${title}`);// Fetching movies using OMDB API
+        const data = await response.json();// Extracting JSON data from the response
         setMovies(data.Search);
     };
 
     useEffect(() => {
-        searchMovies('SpiderMan');
+        searchMovies('SpiderMan');// Fetching initial movies (SpiderMan) when component mounts
+    }, []);
     }, []);
 
+ // Rendering JSX elements
     return (
         <div className="app">
             <NavigationBar />
