@@ -12,12 +12,12 @@ This repository contains a web application for Throne Movie Center, a platform w
 
 **Technologies Used**
 
-React.js
-HTML
-CSS
-Node.js
+-React.js
+-HTML
+-CSS
+-Node.js
 
-**Getting Started **
+
 
 1.Clone the Repository: Clone this repository to your local machine using Git.
 
