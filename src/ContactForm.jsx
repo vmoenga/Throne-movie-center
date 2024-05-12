@@ -1,18 +1,22 @@
 // ContactForm.jsx
 
+// Importing necessary modules and components
 import React, { useState } from 'react';
 
+// Functional component ContactForm
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
-
+    
+// Function to handle changes in form fields
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData); 
@@ -23,7 +27,8 @@ const ContactForm = () => {
             message: ''
         });
     };
-
+    
+// Rendering JSX elements
     return (
         <div className="contact-form">
             <h2>Contact Us</h2>
